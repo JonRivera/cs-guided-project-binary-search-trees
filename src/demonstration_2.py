@@ -51,9 +51,9 @@ def is_valid_BST(self, root):
         if val <= lower or val >= upper:
             return False
 
-        if not helper(node.right, val, upper):
+        if not helper(node.right, val, upper): # if helper != false return False
             return False
-        if not helper(node.left, lower, val):
+        if not helper(node.left, lower, val): # same logic only that were working on the left branch
             return False
         return True
 
